@@ -13,3 +13,4 @@ Auth:
 - Login: POST to Escuelajs /auth/login (form provided)
 Notes:
 - This is a demo using a public test API. Replace endpoints with your real backend if needed.
+# Project
