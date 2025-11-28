@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* base */
+:root { --green: #1f7a3b; --accent: #f9faf9; }
+html,body,#_next{height:100%}
+body { @apply bg-white text-gray-800 antialiased; font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto; }
+.container { max-width: 1200px; margin: 0 auto; padding: 1rem; }
+.header { background: linear-gradient(90deg, rgba(31,122,59,0.06), rgba(31,122,59,0.02)); padding: 1rem 0; border-bottom: 1px solid #eef6ee; }
+.logo { color: var(--green); font-weight: 700; font-size: 1.25rem; }
+.hero { display:flex; gap:1rem; align-items:center; background: #f6fbf6; padding:1.25rem; border-radius:8px; margin-bottom:1rem; }
+.card { background: white; border: 1px solid #eef6ee; border-radius:8px; padding:1rem; box-shadow: 0 1px 4px rgba(16,24,40,0.03); }
+.product-img { width:100%; height:180px; object-fit:cover; border-radius:6px; background:#f3f4f6; }
+.badge-sale { background: #fee2e2; color:#b91c1c; padding:0.15rem 0.4rem; border-radius:4px; font-size:0.75rem; }
+.price { font-weight:700; color:var(--green); }
+.filters { min-width:220px; }
+@media (max-width: 768px) {
+  .hero { flex-direction:column; align-items:flex-start; }
+  .filters { display:none; }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
